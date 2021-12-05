@@ -1,0 +1,3 @@
+- The brief says RxJS is the prefered framework, so reading https://rxjs.dev/guide/overview
+- searched for an article on creating Angular projects in Visual Studio - found https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/angular?view=aspnetcore-6.0&tabs=visual-studio
+- created project by running `dotnet new angular -o shopping-cart`
