@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartService } from './shopping-cart.service';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    MaterialModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
@@ -31,7 +34,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
       { path: 'shopping-cart', component: ShoppingCartComponent },
     ])
   ],
-  providers: [],
+  providers: [ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,2 +1,21 @@
 <h1>Shopping Cart</h1>
+Well, this is embarrassing. We really wanted to show you a list of products here, but something is not quite right yet.
+So instead, we have created a sample card so you can see the one we prepared earlier.
+
+
+<mat-card *ngFor="let item of productList">
+  <mat-card-title>
+    {{ item.name }}
+  </mat-card-title>
+  <mat-card-content>
+    <ul>
+      <li>{{ item.price | currency:'USD':'symbol':'1.2-2' }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" role="button" (click)="addItemToCart(item)">
+      Buy
+    </button>
+  </mat-card-actions>
+</mat-card>
 
